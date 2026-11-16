@@ -61,8 +61,8 @@ def tilelang_kkt_solve(
         a16i_row = T.alloc_fragment((4, 16), dtype=accum_dtype)
         a16i_sum = T.alloc_fragment((4, 16), dtype=accum_dtype)
 
-        a16i_shared = T.alloc_shared((4, 17, 16), dtype=accum_dtype)
-        a16o_shared = T.alloc_shared((2, 17, 16), dtype=accum_dtype)
+        a16i_shared = T.alloc_shared((4, 16, 16), dtype=accum_dtype)
+        a16o_shared = T.alloc_shared((2, 16, 16), dtype=accum_dtype)
         a16o_fragment = T.alloc_fragment((2, 16, 16), dtype=accum_dtype)
 
         a32i_fragment = T.alloc_fragment((2, 32, 32), dtype=accum_dtype)

@@ -66,10 +66,10 @@ def tilelang_kkt_solve(
         a16i_row = T.alloc_fragment((2, 16), dtype=accum_dtype)
         a16i_sum = T.alloc_fragment((2, 16), dtype=accum_dtype)
 
-        # 2 diagonal 16x16 blocks (padded to 17 for alignment)
-        a16i_shared = T.alloc_shared((2, 17, 16), dtype=accum_dtype)
+        # 2 diagonal 16x16 blocks
+        a16i_shared = T.alloc_shared((2, 16, 16), dtype=accum_dtype)
         # 1 sub-diagonal 16x16 coupling (blocks 0->1)
-        a16o_shared = T.alloc_shared((1, 17, 16), dtype=accum_dtype)
+        a16o_shared = T.alloc_shared((1, 16, 16), dtype=accum_dtype)
         a16o_fragment = T.alloc_fragment((1, 16, 16), dtype=accum_dtype)
 
 
